@@ -195,9 +195,13 @@ class AtomDataCompare(object):
 
         merged_df = pd.merge(
             df1,
+
             df2,
+
             left_index=True,
+
             right_index=True,
+            
             suffixes=["_1", "_2"],
         )
 
