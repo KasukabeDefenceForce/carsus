@@ -15,14 +15,6 @@ Prerequisites
 
 #. *(optional)*. Download and extract the `CMFGEN Atomic Data <http://kookaburra.phyast.pitt.edu/hillier/web/CMFGEN.htm>`_.  
 
-====================
-Clone the Repository
-====================
-
-.. code ::
-
-    $ git clone https://github.com/tardis-sn/carsus.git
-
 
 =====================
 Setup the Environment
