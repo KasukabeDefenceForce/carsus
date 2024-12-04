@@ -121,12 +121,10 @@ jobs:
           environment-name: carsus
 
       - name: Install package
-        shell: bash -l {0}
         run: pip install -e .
 
       - name: Build documentation
-        shell: bash -l {0}
-        run: cd docs/; make html NCORES=auto
+        run: cd docs/ && make html NCORES=auto
 
       - name: Set destination directory
         run: |
@@ -169,7 +167,7 @@ jobs:
           EVENT: ${{ github.event_name }}
 
       - name: Deploy ${{ env.DEST_DIR }}
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: ${{ env.DEPLOY_BRANCH }}
@@ -177,8 +175,8 @@ jobs:
           destination_dir: ${{ env.DEST_DIR }}
           keep_files: true
           force_orphan: ${{ env.CLEAN_BRANCH }}
-          user_name: 'Github Actions'
-          user_email: '41898282+github-actions[bot]@users.noreply.github.com'
+          user_name: "TARDIS Bot"
+          user_email: "tardis.sn.bot@gmail.com"
 
       - name: Find comment
         uses: peter-evans/find-comment@v1
@@ -204,13 +202,13 @@ jobs:
             
             [**Click here**](${{ env.URL }}) to see your results.
         env:
-          URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pull/${{ github.event.number }}/
+          URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pull/${{ github.event.number }}/index.html
         if: success() && github.event_name == 'pull_request_target'
 
       - name: Post comment (failure)
         uses: peter-evans/create-or-update-comment@v1
         with:
-          token:  ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: ${{ github.event.number }}
           comment-id: ${{ steps.fc.outputs.comment-id }}
           edit-mode: replace
@@ -220,7 +218,7 @@ jobs:
             Hi, human.
 
             The **`${{ github.workflow }}`** workflow has **failed** :x:
-            
+
             [**Click here**](${{ env.URL }}) to see the build log.
         env:
           URL: https://github.com/${{ github.repository_owner }}/${{ github.event.repository.name }}/actions/runs/${{ github.run_id }}?check_suite_focus=true
