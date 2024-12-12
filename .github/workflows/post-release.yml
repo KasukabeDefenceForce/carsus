@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: tardis-sn/carsus
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.BOT_TOKEN }}
           fetch-depth: 0
 
       - name: Generate a changelog
@@ -102,7 +102,7 @@ jobs:
 
       - uses: peter-evans/create-pull-request@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.BOT_TOKEN }}
           committer: TARDIS Bot <tardis.sn.bot@gmail.com>
           author: TARDIS Bot <tardis.sn.bot@gmail.com>
           branch: post-release-${{ env.DATE }}
