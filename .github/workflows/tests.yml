@@ -43,7 +43,6 @@ env:
 
 jobs:
   build:
-    if: github.repository_owner == 'tardis-sn'
     strategy:
       matrix:
         pip: [true, false]
