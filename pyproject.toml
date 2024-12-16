@@ -25,5 +25,5 @@ filter_unconventional = false
 sort_commits = "newest"
 
 [tool.git-cliff.remote.github]
-owner = "tardis-sn"
+owner = "KasukabeDefenceForce"
 repo = "carsus"
