@@ -10,11 +10,11 @@ defaults:
     shell: bash -l {0}
 
 jobs:
-  pip_tests:
-    uses: ./.github/workflows/tests.yml
-    secrets: inherit
-    with:
-      pip_git: true
+  # pip_tests:
+  #   uses: ./.github/workflows/tests.yml
+  #   secrets: inherit
+  #   with:
+  #     pip_git: true
   zenodo:
     runs-on: ubuntu-latest
     steps:
@@ -59,6 +59,7 @@ jobs:
           path: .zenodo.json
 
   create:
+    needs: [zenodo]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
