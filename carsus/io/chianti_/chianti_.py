@@ -277,7 +277,6 @@ class ChiantiReader:
         version : str
 
     """
-
     def __init__(self, ions, collisions=False, priority=10):
         """
         Parameters
