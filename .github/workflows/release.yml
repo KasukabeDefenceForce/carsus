@@ -16,6 +16,7 @@ jobs:
     secrets: inherit
     with:
       pip_git: true
+  
   zenodo:
     runs-on: ubuntu-latest
     steps:
