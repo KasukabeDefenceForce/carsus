@@ -95,7 +95,6 @@ jobs:
       
       - name: Download Lock File
         run:  wget -q https://raw.githubusercontent.com/tardis-sn/carsus/master/conda-${{ matrix.label }}.lock
-
       - name: Generate Cache Key
         run: | 
           file_hash=$(cat conda-${{ matrix.label}}.lock | shasum -a 256 | cut -d' ' -f1)
