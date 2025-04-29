@@ -42,7 +42,6 @@ env:
 
 jobs:
   build:
-    if: github.repository_owner == 'tardis-sn'
     strategy:
       matrix:
         label: [osx-arm64, linux-64]

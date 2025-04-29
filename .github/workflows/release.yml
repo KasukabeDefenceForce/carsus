@@ -87,7 +87,7 @@ jobs:
         with:
           name: CARSUS v${{ env.NEW_TAG }}
           tag_name: release-${{ env.NEW_TAG }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.BOT_TOKEN }}
           body: "This release has been created automatically by the CARSUS continuous delivery pipeline."
           draft: false
       
@@ -127,7 +127,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: release-${{ env.NEW_TAG }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.FORK_TOKEN }}
           body: |
             This release has been created automatically by the CARSUS continuous delivery pipeline.
             ${{ env.doi_badge }}
