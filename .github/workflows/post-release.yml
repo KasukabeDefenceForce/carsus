@@ -107,7 +107,6 @@ jobs:
           author: TARDIS Bot <tardis.sn.bot@gmail.com>
           branch: post-release-${{ env.DATE }}
           base: master
-          push-to-fork: KasukabeDefenceForce/carsus
           commit-message: Automated changes for post-release ${{ env.DATE }}
           title: Post-release ${{ env.DATE }}
           body: |
