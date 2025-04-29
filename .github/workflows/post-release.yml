@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: tardis-sn/carsus
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.BOT_TOKEN }}
           fetch-depth: 0
 
       - name: Generate a changelog
@@ -141,10 +141,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.CORE_COORDINATOR_TOKEN }}
         if: steps.create-pr.outputs.pull-request-operation == 'created'
 
-      - name: Enable automerge
-        uses: peter-evans/enable-pull-request-automerge@v2
-        with:
-          token: ${{ secrets.INFRASTRUCTURE_COORDINATOR_TOKEN }}
-          pull-request-number: ${{ steps.create-pr.outputs.pull-request-number }}
-          merge-method: squash
-        if: steps.create-pr.outputs.pull-request-operation == 'created'
+      # - name: Enable automerge
+      #   uses: peter-evans/enable-pull-request-automerge@v2
+      #   with:
+      #     token: ${{ secrets.INFRASTRUCTURE_COORDINATOR_TOKEN }}
+      #     pull-request-number: ${{ steps.create-pr.outputs.pull-request-number }}
+      #     merge-method: squash
+      #   if: steps.create-pr.outputs.pull-request-operation == 'created'
