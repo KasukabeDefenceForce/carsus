@@ -20,8 +20,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: tardis-sn/tardis_zenodo
-          token: ${{ secrets.BOT_TOKEN }}
+          repository: KasukabeDefenceForce/tardis_zenodo
+          token: ${{ secrets.FORK_TOKEN }}
 
       - name: Download Lock File
         run:  wget -q https://raw.githubusercontent.com/tardis-sn/carsus/master/conda-linux-64.lock
