@@ -87,7 +87,7 @@ jobs:
         with:
           name: CARSUS v${{ env.NEW_TAG }}
           tag_name: release-${{ env.NEW_TAG }}
-          token: ${{ secrets.BOT_TOKEN }}
+          token: ${{ secrets.FORK_TOKEN }}
           body: "This release has been created automatically by the CARSUS continuous delivery pipeline."
           draft: false
       
