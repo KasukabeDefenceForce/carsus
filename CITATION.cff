@@ -1,0 +1,73 @@
+# YAML 1.2
+# Metadata for citation of this software according to the CFF format (https://citation-file-format.github.io/)
+cff-version: 1.0.3
+message: If you use this software, please cite it using these metadata.
+# FIXME title as repository name might not be the best name, please make human readable
+title: 'tardis-sn/carsus: Carsus v2024.12.23'
+doi: 10.5281/zenodo.14546688
+# FIXME splitting of full names is error prone, please check if given/family name are correct
+authors:
+- given-names: Misha
+  family-names: Mishin
+  affiliation: Data Engineer at Oda
+- given-names: Ezequiel
+  family-names: Pássaro
+  affiliation:
+- given-names: yeganer
+  family-names: ''
+  affiliation:
+- given-names: Joshua
+  family-names: Shields
+  affiliation:
+- given-names: Wolfgang
+  family-names: Kerzendorf
+  affiliation:
+- given-names: Atharva
+  family-names: Arya
+  affiliation:
+- given-names: Andrew
+  family-names: ''
+  affiliation: Michigan State University
+- given-names: Shreyas
+  family-names: Singh
+  affiliation:
+- given-names: Christian
+  family-names: Vogl
+  affiliation: Max Planck Institute for Astrophysics
+- given-names: Shikha
+  family-names: Rathi
+  affiliation:
+- given-names: Youssef15015
+  family-names: ''
+  affiliation:
+- given-names: Jonatan
+  family-names: Selsing
+  affiliation: Dark Cosmology Centre, Niels Bohr Institute, University of Copenhagen
+- given-names: ssim
+  family-names: ''
+  affiliation:
+- given-names: Andreas
+  family-names: Flörs
+  affiliation:
+- given-names: Ayushi
+  family-names: Daksh
+  affiliation:
+- given-names: KasukabeDefenceForce
+  family-names: ''
+  affiliation:
+- given-names: Laureano
+  family-names: Martinez
+  affiliation:
+- given-names: Luke
+  family-names: Shingles
+  affiliation: GSI Helmholtz Centre for Heavy Ion Research
+- given-names: The Gitter
+  family-names: Badger
+  affiliation: Gitter
+- given-names: Atul
+  family-names: Kumar
+  affiliation:
+version: release-2024.12.23
+date-released: 2024-12-23
+repository-code: https://github.com/tardis-sn/carsus
+license: cc-by-4.0
