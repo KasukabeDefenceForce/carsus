@@ -11,10 +11,6 @@ defaults:
 
 
 jobs:
-  pip_tests:
-    uses: ./.github/workflows/tests.yml
-    secrets: inherit
-  
   zenodo:
     runs-on: ubuntu-latest
     steps:
@@ -59,7 +55,7 @@ jobs:
           path: .zenodo.json
 
   create:
-    needs: [pip_tests, zenodo]
+    needs: [zenodo]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
