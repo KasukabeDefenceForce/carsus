@@ -70,9 +70,53 @@ If you publish work that uses CARSUS, please include the following BibTeX entry:
       adsnote = {Provided by the SAO/NASA Astrophysics Data System}
     }
 
+.. |CITATION| replace:: misha_mishin_2024_14546688
+
+.. |DOI_BADGE| image:: https://img.shields.io/badge/DOI-10.5281/zenodo.misha_mishin_2024_14546688-blue
+                 :target: https://doi.org/10.5281/zenodo.misha_mishin_2024_14546688
+
+.. code-block:: bibtex
+
+    @software{misha_mishin_2024_14546688,
+      author       = {Misha Mishin and
+                      Ezequiel Pássaro and
+                      yeganer and
+                      Joshua Shields and
+                      Wolfgang Kerzendorf and
+                      Atharva Arya and
+                      Andrew and
+                      Shreyas Singh and
+                      Christian Vogl and
+                      Shikha Rathi and
+                      Youssef15015 and
+                      Jonatan Selsing and
+                      ssim and
+                      Andreas Flörs and
+                      Ayushi Daksh and
+                      KasukabeDefenceForce and
+                      Laureano Martinez and
+                      Luke Shingles and
+                      The Gitter Badger and
+                      Atul Kumar},
+      title        = {tardis-sn/carsus: Carsus v2024.12.23},
+      month        = dec,
+      year         = 2024,
+      publisher    = {Zenodo},
+      version      = {release-2024.12.23},
+      doi          = {10.5281/zenodo.14546688},
+      url          = {https://doi.org/10.5281/zenodo.14546688},
+    }
+
 *******
 License
 *******
+
+.. image:: https://img.shields.io/conda/l/conda-forge/tardis-sn
+    :target: https://github.com/tardis-sn/tardis/blob/master/licenses/LICENSE.rst
+
+.. image:: http://img.shields.io/badge/powered%20by-AstroPy-orange.svg?style=flat
+    :target: http://www.astropy.org
+|
 
 This project is Copyright (c) TARDIS Collaboration and licensed under
 the terms of the BSD 3-Clause license. This package is based upon
