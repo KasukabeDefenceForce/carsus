@@ -42,3 +42,4 @@ If you publish work that uses CARSUS, please include the following BibTeX entry:
       adsnote = {Provided by the SAO/NASA Astrophysics Data System}
     }
 
+.. include:: zenodo.rst
