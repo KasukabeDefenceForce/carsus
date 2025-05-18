@@ -1,0 +1,34 @@
+# YAML 1.2
+# Metadata for citation of this software according to the CFF format (https://citation-file-format.github.io/)
+cff-version: 1.0.3
+message: If you use this software, please cite it using these metadata.
+# FIXME title as repository name might not be the best name, please make human readable
+title: 'KasukabeDefenceForce/carsus: CARSUS v0025.05.12.1'
+doi: 10.5281/zenodo.15386341
+# FIXME splitting of full names is error prone, please check if given/family name are correct
+authors:
+- given-names: Wolfgang
+  family-names: Kerzendorf
+  affiliation: Michigan State University
+  orcid: https://orcid.org/0000-0002-0479-7235
+- given-names: Mikhail
+  family-names: Mishin
+  affiliation:
+- given-names: Ezequiel
+  family-names: Pássaro
+  affiliation:
+  orcid: https://orcid.org/0000-0002-3707-1975
+- given-names: Youssef
+  family-names: Eweis
+  affiliation:
+- given-names: Jonatan
+  family-names: Selsing
+  affiliation:
+- given-names: Stuart
+  family-names: Sim
+  affiliation: Queen's University Belfast
+  orcid: https://orcid.org/0000-0002-9774-1192
+version: release-0025.05.12.1
+date-released: 2025-05-12
+repository-code: https://github.com/KasukabeDefenceForce/carsus
+license: cc-by-4.0

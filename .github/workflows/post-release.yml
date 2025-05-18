@@ -66,7 +66,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: "3.12"
 
       - name: Install rst-include
         run: pip install rst-include==2.1.2.2 requests==2.27.1
@@ -103,11 +103,11 @@ jobs:
       - uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.BOT_TOKEN }}
+
           committer: TARDIS Bot <tardis.sn.bot@gmail.com>
           author: TARDIS Bot <tardis.sn.bot@gmail.com>
           branch: post-release-${{ env.DATE }}
           base: master
-          push-to-fork: tardis-bot/carsus
           commit-message: Automated changes for post-release ${{ env.DATE }}
           title: Post-release ${{ env.DATE }}
           body: |
