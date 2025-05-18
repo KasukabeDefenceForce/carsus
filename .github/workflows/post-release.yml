@@ -12,8 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: KasukabeDefenceForce/carsus
-          token: ${{ secrets.FORK_TOKEN }}
+          repository: tardis-sn/carsus
+          token: ${{ secrets.BOT_TOKEN }}
           fetch-depth: 0
 
       - name: Generate a changelog
@@ -48,7 +48,7 @@ jobs:
       - name: Update CITATION.cff
         run: |
           rm -f CITATION.cff
-          doi2cff init 10.5281/zenodo.14216805
+          doi2cff init 10.5281/zenodo.14546687
 
       - uses: actions/upload-artifact@v4
         with:
@@ -102,7 +102,8 @@ jobs:
 
       - uses: peter-evans/create-pull-request@v4
         with:
-          token: ${{ secrets.FORK_TOKEN }}
+          token: ${{ secrets.BOT_TOKEN }}
+
           committer: TARDIS Bot <tardis.sn.bot@gmail.com>
           author: TARDIS Bot <tardis.sn.bot@gmail.com>
           branch: post-release-${{ env.DATE }}

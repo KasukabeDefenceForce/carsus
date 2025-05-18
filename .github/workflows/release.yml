@@ -11,13 +11,17 @@ defaults:
 
 
 jobs:
+  pip_tests:
+    uses: ./.github/workflows/tests.yml
+    secrets: inherit
+
   zenodo:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: KasukabeDefenceForce/tardis_zenodo
-          token: ${{ secrets.FORK_TOKEN }}
+          repository: tardis-sn/tardis_zenodo
+          token: ${{ secrets.BOT_TOKEN }}
 
       - name: Download Lock File
         run:  wget -q https://raw.githubusercontent.com/tardis-sn/carsus/master/conda-linux-64.lock
@@ -55,7 +59,7 @@ jobs:
           path: .zenodo.json
 
   create:
-    needs: [zenodo]
+    needs: [pip_tests, zenodo]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -83,7 +87,8 @@ jobs:
         with:
           name: CARSUS v${{ env.NEW_TAG }}
           tag_name: release-${{ env.NEW_TAG }}
-          token: ${{ secrets.FORK_TOKEN }}
+          token: ${{ secrets.BOT_TOKEN }}
+
           body: "This release has been created automatically by the CARSUS continuous delivery pipeline."
           draft: false
       
@@ -93,7 +98,8 @@ jobs:
       - name: Fetch Latest DOI from Zenodo
         id: fetch-doi
         run: |
-            CONCEPT_DOI="14216805"
+
+            CONCEPT_DOI="14546687"
             # Make the API request for BibTeX format, following redirects
             response=$(curl -s -L -H "Accept: application/x-bibtex" "https://zenodo.org/api/records/${CONCEPT_DOI}")
         
@@ -123,7 +129,8 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: release-${{ env.NEW_TAG }}
-          token: ${{ secrets.FORK_TOKEN }}
+          token: ${{ secrets.BOT_TOKEN }}
+
           body: |
             This release has been created automatically by the CARSUS continuous delivery pipeline.
             ${{ env.doi_badge }}
